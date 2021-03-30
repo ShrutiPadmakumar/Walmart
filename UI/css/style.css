@@ -620,7 +620,9 @@ a:focus {
 .why_us_section .box .detail-box a:hover {
   color: #f3c93e;
 }
-
+#buytogether a:hover {
+  color: #f3c93e;
+}
 .why_us_section .box:hover .img-box img {
   -webkit-filter: brightness(1);
           filter: brightness(1);

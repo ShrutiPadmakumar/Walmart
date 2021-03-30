@@ -16,7 +16,7 @@ align-content: center;
 }
 
 .card{
-height: 370px;
+height: 420px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;
@@ -86,4 +86,8 @@ color: white;
 
 .links a{
 margin-left: 4px;
+}
+
+.buytogether:hover{
+    color: #f3c93e;
 }
