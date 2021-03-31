@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;
+          width: 60%;
+          margin-left: 20%;
+        }
+        
+        .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        
+        .container {
+          padding: 2px 16px;
+          text-align: left;
+        }
+
+        /* map needs width and height to appear */
+#map{
+	width: 900px;
+	max-width: 100%;
+	height: 500px;
+    text-align:center;
+    margin-left:200px;
+}
+//https://www.google.com/maps/d/u/0/edit?mid=1YeLj3WmdccmkjMVpKLUOLhmhq76FnZwr&usp=sharing
+        </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="//api.cloudsponge.com/widget/pSFcnOxmB2cDNwqo8A_L4w.js"></script>
+    <script src="js/importContacts.js"></script>
+    <script>
+    // extra widget options go here:
+    cloudsponge.init({
+      afterImport:function(source, success) {
+        if (success) {
+          alert("Your contacts were imported successfully from " + source + "!");
+        
+        } else {
+          alert("There was a problem importing your contacts from " + source + ".");
+        }
+      }
+    });
+    
+    </script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/walmart-logo-preview.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Walmart | Save Money. Live Better</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> <!-- range slider -->
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    .button {
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    textarea {
+        overflow-y: scroll;
+        height: 100px;
+        resize: none; /* Remove this if you want the user to resize the textarea */
+    }
+    .button1 {background-color: #008CBA; float: left;width:320px} /* Green */
+    .button2 {background-color: #008CBA;} /* Blue */
+    #DisplayFriends{
+        float:left;
+       
+        text-align: left;
+        z-index:-1;
+        position: absolute;
+    }
+    .friendrow{
+        width: 500px;
+        background-color: white;
+
+    }
+    body{
+    background-color : #DCDCDC;
+    }
+    </style>
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="top_nav_container">
+            <div class="contact_nav">
+              <a href="">
+            
+                <span>
+                  <b>Pickup & Delivery</b>
+                </span>
+              </a>
+              <a href="">
+               
+                <span class="nav-item active" style="color:#f3c93e;">
+                   
+                  &nbsp;  &nbsp; &nbsp;<b><u>Walmart.com</u></b>
+                
+                </span>
+              </a>
+            </div>
+            <h5 style="color:white;margin-right: 120px;"><i>Welcome Alice Jordan!</i> </h5>
+          </div>
+         
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                Walmart
+              </span>
+            </a> &emsp;
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+            <a class="nav-link" href="importContacts.html" ><i class="fa fa-users" aria-hidden="true"></i> &nbsp;Buy together</a>
+          </li>
+          </ul>
+        </div>
+            &emsp;&emsp;
+            <from class="search_form" >
+              <input type="text" class="form-control" placeholder="Search walmart.com" size="40" style="text-align: center;" style="border-radius: 50px;">
+              <button class="" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </from>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="afterLogin.html"> <i class="fa fa-user" aria-hidden="true"></i> Alice Jordan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="afterLogin.html"><i class="fa fa-heart"></i> &nbsp;My Items</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="afterLogin.html"> <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <br><br>
+    <!-- end header section -->
+    <div style="text-align:center;">
+      <div id="map"></div>
+
+      <script type="text/javascript">
+        var locations = [
+          
+          ['Priyanka- Dabur Honey', 38.03312, -95.78707, 5],
+          ['Zina- Arial Original', 38.03313, -95.78706, 5],
+         
+          ['Brabha - Amul Cheese', 38.03315, -95.78706, 5],
+           ['Mano - Fair & Lovely', 38.03314,  -95.78707, 5],
+        
+         
+        ];
+        var locations2 = [
+          
+         
+         ['Priyanka- Tata Salt', 38.03312, -95.78709, 5],
+          ['Zina- Colgate Paste', 38.03313, -95.78708, 5],
+        
+          ['Brabha - Milk', 38.03315, -95.78702, 5],
+          ['Mano - Cheetos', 38.03314,  -95.78701, 5],
+        
+        ];
+    
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 22,
+          center: new google.maps.LatLng(38.03312, -95.78707),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+    
+        var infowindow = new google.maps.InfoWindow();
+    
+        var marker, i;
+    
+        for (i = 0; i < locations.length; i++) { 
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map,
+            icon:"images/small"+i+".jpg"
+          });
+    
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+              infowindow.setContent(locations[i][0]);
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+        }
+        for (i = 0; i < locations2.length; i++) { 
+          marker1 = new google.maps.Marker({
+            position: new google.maps.LatLng(locations2[i][1], locations2[i][2]),
+            map: map,
+            icon:"images/small"+i+".jpg",
+            
+          });
+    
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+              infowindow.setContent(locations[i][0]);
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+          google.maps.event.addListener(marker1, 'click', (function(marker1, i) {
+            return function() {
+              infowindow.setContent(locations2[i][0]);
+              infowindow.open(map, marker1);
+            }
+          })(marker1, i));
+        }
+      </script>
+</div>
+
+    </div>
+</body>
+
+</html>
